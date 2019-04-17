@@ -1,1 +1,4 @@
 rootProject.name = 'recoveryplus-mobi-common-support'
+include 'recoveryplus-common-utils'
+include 'recoveryplus-common-spring'
+include 'recoveryplus-common-log'
