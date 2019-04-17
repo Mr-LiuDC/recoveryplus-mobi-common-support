@@ -28,3 +28,7 @@ HELP.md
 
 ### VS Code ###
 .vscode/
+
+### 自定义需要忽略的内容 ###
+target/
+*.log
