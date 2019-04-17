@@ -1,4 +1,4 @@
-group 'recoveryplus.mobi'
+group 'recoveryplus.mobi.common'
 version '0.0.1-SNAPSHOT'
 
 apply plugin: 'java'
