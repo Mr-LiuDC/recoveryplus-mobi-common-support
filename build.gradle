@@ -1,19 +1,101 @@
 plugins {
+    id "org.sonarqube" version "2.6"
     id "io.spring.dependency-management" version "1.0.7.RELEASE"
 }
 
+ext {
+    recoveryplus_common_version = '0.0.1-SNAPSHOT'
 
-group 'recoveryplus.mobi.common'
-version '0.0.1-SNAPSHOT'
+    def env = System.getProperty("env") ?: "local"
+    repository_url = 'https://repo.rdc.aliyun.com/repository/32689-snapshot-mdskME/'
+    deploy_username = "${rdc_snapshots_user}"
+    deploy_password = "${rdc_snapshots_password}"
+    if (env == 'release' || env == 'pre_release' || env == 'prod') {
+        repository_url = 'https://repo.rdc.aliyun.com/repository/32689-release-iWEQiT/'
+        deploy_username = "${rdc_releases_user}"
+        deploy_password = "${rdc_releases_password}"
 
-apply plugin: 'java'
-
-sourceCompatibility = 1.8
-
-repositories {
-    mavenCentral()
+        recoveryplus_common_version = '0.0.1.RELEASE'
+    }
 }
 
-dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+allprojects {
+    apply plugin: 'pmd'
+    apply plugin: 'java'
+    apply plugin: 'jacoco'
+    apply plugin: 'idea'
+    apply plugin: 'maven'
+    apply plugin: 'io.spring.dependency-management'
+
+    group 'recoveryplus.mobi.common'
+    version recoveryplus_common_version
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+    repositories {
+        mavenLocal()
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+        maven {
+            url 'https://repo.rdc.aliyun.com/repository/32689-snapshot-mdskME/'
+            credentials {
+                username = "${rdc_snapshots_user}"
+                password = "${rdc_snapshots_password}"
+            }
+        }
+        maven {
+            url 'https://repo.rdc.aliyun.com/repository/32689-release-iWEQiT/'
+            credentials {
+                username = "${rdc_releases_user}"
+                password = "${rdc_releases_password}"
+            }
+        }
+        mavenCentral()
+    }
+
+    configurations.all {
+        resolutionStrategy {
+            failOnVersionConflict()
+            cacheDynamicVersionsFor 10 * 60, 'seconds'
+            cacheChangingModulesFor 0, 'seconds'
+        }
+    }
+
+    dependencyManagement {
+        imports {
+            mavenBom 'recoveryplus.mobi.common:recoveryplus-mobi-parent:0.0.1-SNAPSHOT'
+        }
+    }
+
+    jacocoTestReport {
+        reports {
+            xml.enabled = false
+            html.enabled = true
+        }
+    }
+    check.dependsOn jacocoTestReport
+
+    pmd {
+        ignoreFailures = false
+        consoleOutput = true
+        reportsDir = file("build/reports/pmd")
+        ruleSets = [
+                "java-ali-comment",
+                "java-ali-concurrent",
+                "java-ali-constant",
+                "java-ali-exception",
+                "java-ali-flowcontrol",
+                "java-ali-naming",
+                "java-ali-oop",
+                "java-ali-orm",
+                "java-ali-other",
+                "java-ali-set",
+        ]
+    }
+
+    dependencies {
+        testCompile 'junit:junit'
+        pmd 'com.alibaba.p3c:p3c-pmd'
+    }
+
 }
