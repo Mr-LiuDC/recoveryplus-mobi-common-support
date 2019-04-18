@@ -13,12 +13,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
+            <groupId>recoveryplus.mobi.common</groupId>
+            <artifactId>recoveryplus-common-utils</artifactId>
+            <version>${recoveryplus-common.version}</version>
         </dependency>
     </dependencies>
 

@@ -1,5 +1,6 @@
 dependencies {
     compile 'org.slf4j:slf4j-api'
+    compile 'com.alibaba:fastjson'
     compile 'com.google.guava:guava'
     compile 'org.apache.commons:commons-lang3'
 }

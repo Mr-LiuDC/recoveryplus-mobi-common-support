@@ -11,6 +11,7 @@
 
     <properties>
         <project.version>0.0.1-SNAPSHOT</project.version>
+        <recoveryplus-common.version>0.0.1-SNAPSHOT</recoveryplus-common.version>
     </properties>
 
     <parent>
@@ -49,6 +50,7 @@
         </dependencies>
     </dependencyManagement>
 
+    <!--
     <distributionManagement>
         <repository>
             <id>rdc-releases</id>
@@ -59,6 +61,7 @@
             <url>https://repo.rdc.aliyun.com/repository/32689-snapshot-mdskME/</url>
         </snapshotRepository>
     </distributionManagement>
+    -->
 
     <profiles>
         <profile>
@@ -166,10 +169,16 @@
                 <repository>
                     <id>rdc-releases</id>
                     <url>https://repo.rdc.aliyun.com/repository/32689-release-iWEQiT/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
                 </repository>
                 <repository>
                     <id>rdc-snapshots</id>
                     <url>https://repo.rdc.aliyun.com/repository/32689-snapshot-mdskME/</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
                 </repository>
             </repositories>
         </profile>
