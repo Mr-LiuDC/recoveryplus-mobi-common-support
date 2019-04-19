@@ -5,5 +5,6 @@ package recoveryplus.mobi.project.application.service;
  *
  * @author LiuDecai
  */
-public interface UserApplicationService {
+public interface CatApplicationService {
+    void createCat(String catId, String catName);
 }

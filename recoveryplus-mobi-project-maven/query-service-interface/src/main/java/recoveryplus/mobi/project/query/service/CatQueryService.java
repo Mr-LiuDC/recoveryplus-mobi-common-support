@@ -5,5 +5,5 @@ package recoveryplus.mobi.project.query.service;
  *
  * @author LiuDecai
  */
-public interface UserQueryService {
+public interface CatQueryService {
 }
