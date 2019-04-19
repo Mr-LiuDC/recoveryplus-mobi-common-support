@@ -31,7 +31,7 @@ uploadArchives {
                 authentication(userName: "${deploy_username}", password: "${deploy_password}")
             }
             pom.groupId = "recoveryplus.mobi.common"
-            pom.artifactId = "recoveryplus-common-utils"
+            pom.artifactId = "recoveryplus-common-ddd-support"
             pom.version = "${recoveryplus_common_version}"
         }
     }
