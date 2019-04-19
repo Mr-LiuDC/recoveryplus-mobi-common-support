@@ -1,2 +1,13 @@
 rootProject.name = 'recoveryplus-mobi-project-gradle'
+include 'application-service'
+include 'application-service-impl'
+include 'data-access-layer'
+include 'domain-model'
+include 'domain-common'
+include 'domain-infrastructure'
+include 'data-transfer-object'
+include 'query-service'
+include 'query-service-impl'
+include 'restful-api'
+include 'restful-api-sdk'
 
