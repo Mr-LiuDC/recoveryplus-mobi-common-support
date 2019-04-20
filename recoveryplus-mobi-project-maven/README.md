@@ -2,4 +2,4 @@
 
 
 ### 执行Sonar静态扫描
-``` mvnw clean compile sonar:sonar ```
+``` mvnw clean package sonar:sonar ```

@@ -12,6 +12,7 @@
     <properties>
         <project.version>0.0.1-SNAPSHOT</project.version>
         <recoveryplus-common.version>0.0.1-SNAPSHOT</recoveryplus-common.version>
+        <jacoco-maven-plugin.version>0.8.3</jacoco-maven-plugin.version>
 
         <sonar.host.url>http://192.168.2.127:9000</sonar.host.url>
         <sonar.login>030a3b4c27ad3d5fb2d89177f850fa2929224db2</sonar.login>
@@ -191,4 +192,27 @@
         </profile>
     </profiles>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>${jacoco-maven-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
