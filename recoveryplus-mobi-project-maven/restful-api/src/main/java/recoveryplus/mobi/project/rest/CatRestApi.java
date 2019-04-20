@@ -21,6 +21,8 @@ import static java.lang.String.format;
 @RequestMapping("/api/cat")
 public class CatRestApi {
 
+    private static final String SUCCESS = "success";
+
     private final ICatQueryService catQueryService;
     private final ICatApplicationService catApplicationService;
 
@@ -33,28 +35,28 @@ public class CatRestApi {
     @PostMapping
     public RestResponse createCat(@RequestParam String catName) {
         catApplicationService.createCat(ObjectId.get().toString(), catName);
-        return RestResponse.buildRestResponse("创建成功", "success");
+        return RestResponse.buildRestResponse("创建成功", SUCCESS);
     }
 
     @DeleteMapping
     public RestResponse deleteById(@RequestParam String catId) {
         catApplicationService.deleteCatById(catId);
-        return RestResponse.buildRestResponse("删除成功", "success");
+        return RestResponse.buildRestResponse("删除成功", SUCCESS);
     }
 
     @PutMapping
     public RestResponse updateById(@RequestParam String catId, @RequestParam String catName) {
         catApplicationService.updateCatById(catId, catName);
-        return RestResponse.buildRestResponse("更新成功", "success");
+        return RestResponse.buildRestResponse("更新成功", SUCCESS);
     }
 
     @GetMapping
     public RestResponse getById(@RequestParam String catId) {
         Optional<CatDTO> optionalCatDTO = catQueryService.getCatById(catId);
         if (optionalCatDTO.isPresent()) {
-            return RestResponse.buildRestResponse(optionalCatDTO.get(), "success");
+            return RestResponse.buildRestResponse(optionalCatDTO.get(), SUCCESS);
         } else {
-            return RestResponse.buildRestResponse(format("ID为%s的猫咪不存在", catId), "success");
+            return RestResponse.buildRestResponse(format("ID为%s的猫咪不存在", catId), SUCCESS);
         }
     }
 
