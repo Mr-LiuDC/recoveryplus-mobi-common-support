@@ -3,6 +3,7 @@ package recoveryplus.mobi.common.ddd.support.repository;
 import recoveryplus.mobi.common.ddd.support.domain.IAggregateRoot;
 
 import java.io.Serializable;
+import java.util.Optional;
 
 
 /**
@@ -43,6 +44,6 @@ public interface IRepository<M extends IAggregateRoot<ID>, ID extends Serializab
      * @param id 模型ID
      * @return 模型
      */
-    M get(ID id);
+    Optional<M> get(ID id);
 
 }
