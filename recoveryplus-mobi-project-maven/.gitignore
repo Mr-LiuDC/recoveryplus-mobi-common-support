@@ -30,4 +30,5 @@ HELP.md
 
 ### 自定义需要忽略的内容 ###
 target/
+classes/
 *.log

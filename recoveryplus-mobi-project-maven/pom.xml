@@ -12,6 +12,10 @@
     <properties>
         <project.version>0.0.1-SNAPSHOT</project.version>
         <recoveryplus-common.version>0.0.1-SNAPSHOT</recoveryplus-common.version>
+
+        <sonar.host.url>http://192.168.2.127:9000</sonar.host.url>
+        <sonar.login>030a3b4c27ad3d5fb2d89177f850fa2929224db2</sonar.login>
+        <sonar.projectName>recoveryplus-mobi-project-maven</sonar.projectName>
     </properties>
 
     <parent>
@@ -24,10 +28,10 @@
     <modules>
         <module>restful-api-sdk</module>
         <module>restful-api</module>
-        <module>query-service-interface</module>
-        <module>query-service-implement</module>
-        <module>application-service-interface</module>
-        <module>application-service-implement</module>
+        <module>query-service</module>
+        <module>query-service-impl</module>
+        <module>application-service</module>
+        <module>application-service-impl</module>
         <module>domain-infrastructure</module>
         <module>data-transfer-object</module>
         <module>data-access-layer</module>
@@ -36,6 +40,11 @@
     </modules>
 
     <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -50,7 +59,6 @@
         </dependencies>
     </dependencyManagement>
 
-    <!--
     <distributionManagement>
         <repository>
             <id>rdc-releases</id>
@@ -61,7 +69,6 @@
             <url>https://repo.rdc.aliyun.com/repository/32689-snapshot-mdskME/</url>
         </snapshotRepository>
     </distributionManagement>
-    -->
 
     <profiles>
         <profile>

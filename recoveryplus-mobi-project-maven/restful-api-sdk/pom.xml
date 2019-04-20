@@ -25,11 +25,6 @@
             <artifactId>recoveryplus-common-utils</artifactId>
             <version>${recoveryplus-common.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <scope>provided</scope>
-        </dependency>
     </dependencies>
 
 </project>

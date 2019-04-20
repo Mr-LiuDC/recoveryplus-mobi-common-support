@@ -16,7 +16,7 @@ public class RuneApplicationTest {
 
     @Test
     public void loadContext() {
-
+        RuneApplication.main(new String[]{});
     }
 
 }

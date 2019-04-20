@@ -15,23 +15,23 @@
     <dependencies>
         <dependency>
             <groupId>recoveryplus.mobi.project</groupId>
-            <artifactId>application-service-interface</artifactId>
+            <artifactId>application-service</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>recoveryplus.mobi.project</groupId>
-            <artifactId>query-service-interface</artifactId>
+            <artifactId>query-service</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>recoveryplus.mobi.project</groupId>
-            <artifactId>application-service-implement</artifactId>
+            <artifactId>application-service-impl</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>recoveryplus.mobi.project</groupId>
-            <artifactId>query-service-implement</artifactId>
+            <artifactId>query-service-impl</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
         </dependency>

@@ -18,6 +18,11 @@
             <artifactId>domain-common</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>recoveryplus.mobi.common</groupId>
+            <artifactId>recoveryplus-common-ddd-support</artifactId>
+            <version>${recoveryplus-common.version}</version>
+        </dependency>
     </dependencies>
 
 </project>
