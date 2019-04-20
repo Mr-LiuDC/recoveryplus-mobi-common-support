@@ -14,7 +14,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 public class RuneApplicationTest {
 
-    @Test
+    @Test(timeout = 6000)
     public void loadContext() {
         RuneApplication.main(new String[]{});
     }
