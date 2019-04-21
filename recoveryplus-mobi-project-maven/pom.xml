@@ -14,8 +14,8 @@
         <recoveryplus-common.version>0.0.1-SNAPSHOT</recoveryplus-common.version>
         <jacoco-maven-plugin.version>0.8.3</jacoco-maven-plugin.version>
 
-        <sonar.host.url>http://192.168.2.127:9000</sonar.host.url>
-        <sonar.login>030a3b4c27ad3d5fb2d89177f850fa2929224db2</sonar.login>
+        <sonar.host.url>http://sonarqube.ngrok.aipark.fun</sonar.host.url>
+        <sonar.login>971dcde95c0ef07630300f9361293ecb5eb274ee</sonar.login>
         <sonar.projectName>recoveryplus-mobi-project-maven</sonar.projectName>
     </properties>
 
