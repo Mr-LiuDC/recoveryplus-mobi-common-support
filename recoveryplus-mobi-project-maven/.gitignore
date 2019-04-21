@@ -32,3 +32,4 @@ HELP.md
 target/
 classes/
 *.log
+out/
