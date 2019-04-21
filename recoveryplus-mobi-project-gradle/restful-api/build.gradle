@@ -1,8 +1,25 @@
+plugins {
+    id "org.springframework.boot" version "2.1.3.RELEASE"
+}
+
 dependencies {
     compile project(':query-service')
     compile project(':application-service')
+    compile('org.springframework.boot:spring-boot-starter-web') {
+        exclude module: 'spring-boot-starter-tomcat'
+    }
+    compile 'org.springframework.boot:spring-boot-starter-undertow'
+    compile 'org.springframework.cloud:spring-cloud-starter-openfeign'
+    compile 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix'
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+}
 
-//    compile 'org.springframework.boot:spring-boot-starter-web'
-//
-//    testCompile 'org.springframework.boot:spring-boot-starter-test'
+def env = System.getProperty("env") ?: "local"
+sourceSets {
+    main {
+        resources.srcDirs = ["src/main/resources", "src/main/resources_$env"]
+    }
+    test {
+        output.resourcesDir = "build/classes/test"
+    }
 }

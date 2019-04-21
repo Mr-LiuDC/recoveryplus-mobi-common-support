@@ -1,4 +1,4 @@
-package recoveryplus.mobi.project.sdk;
+package recoveryplus.mobi.project.rest.sdk;
 
 import org.springframework.cloud.openfeign.FeignClient;
 

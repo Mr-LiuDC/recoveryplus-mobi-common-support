@@ -1,3 +1,4 @@
 dependencies {
+    compile project(':domain-common')
     compile "recoveryplus.mobi.common:recoveryplus-common-ddd-support:${recoveryplusCommonLibVersion}"
 }
