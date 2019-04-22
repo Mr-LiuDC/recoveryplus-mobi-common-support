@@ -28,10 +28,7 @@ sourceSets {
     }
 }
 
-jar {
+bootJar {
     baseName = "dog-application"
-}
-
-springBoot {
     mainClassName = "recoveryplus.mobi.project.RunApplication"
 }
