@@ -96,6 +96,7 @@ allprojects {
     }
 
     dependencies {
+        compileOnly 'org.projectlombok:lombok'
         testCompile 'junit:junit'
         pmd 'com.alibaba.p3c:p3c-pmd'
     }

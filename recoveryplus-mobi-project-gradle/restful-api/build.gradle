@@ -3,6 +3,9 @@ plugins {
 }
 
 dependencies {
+    runtime project(':query-service-impl')
+    runtime project(':application-service-impl')
+
     compile project(':query-service')
     compile project(':application-service')
     compile('org.springframework.boot:spring-boot-starter-web') {
@@ -11,6 +14,7 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-undertow'
     compile 'org.springframework.cloud:spring-cloud-starter-openfeign'
     compile 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix'
+
     testCompile 'org.springframework.boot:spring-boot-starter-test'
 }
 
