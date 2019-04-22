@@ -27,3 +27,7 @@ sourceSets {
         output.resourcesDir = "build/classes/test"
     }
 }
+
+jar {
+    baseName = "dog-application"
+}
