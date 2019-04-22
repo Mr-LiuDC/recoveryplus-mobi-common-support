@@ -30,4 +30,8 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <finalName>cat-restful-api-sdk-${project.version}</finalName>
+    </build>
+
 </project>
