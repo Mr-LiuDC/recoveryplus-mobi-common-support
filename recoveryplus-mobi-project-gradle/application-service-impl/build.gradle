@@ -1,5 +1,5 @@
 dependencies {
     compile project(':domain-model')
     compile project(':application-service')
-    compile project(':domain-infrastructure')
+    compile 'org.springframework:spring-context'
 }
