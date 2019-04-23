@@ -19,13 +19,12 @@
         </dependency>
         <dependency>
             <groupId>recoveryplus.mobi.project</groupId>
-            <artifactId>domain-infrastructure</artifactId>
+            <artifactId>domain-model</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>recoveryplus.mobi.project</groupId>
-            <artifactId>domain-model</artifactId>
-            <version>${project.version}</version>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
         </dependency>
     </dependencies>
 
