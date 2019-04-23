@@ -60,6 +60,8 @@ allprojects {
             failOnVersionConflict()
             cacheDynamicVersionsFor 10 * 60, 'seconds'
             cacheChangingModulesFor 0, 'seconds'
+
+            force 'com.google.code.findbugs:jsr305:3.0.2'
         }
     }
 
