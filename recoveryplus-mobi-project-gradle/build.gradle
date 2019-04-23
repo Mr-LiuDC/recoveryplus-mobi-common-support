@@ -8,13 +8,13 @@ ext {
     recoveryplusCommonLibVersion = '0.0.1-SNAPSHOT'
 
     def env = System.getProperty("env") ?: "local"
-    repository_url = 'https://repo.rdc.aliyun.com/repository/32689-snapshot-mdskME/'
-    deploy_username = "${rdc_snapshots_user}"
-    deploy_password = "${rdc_snapshots_password}"
+    repository_url = 'https://repo.rdc.aliyun.com/repository/26265-snapshot-jHAMd1/'
+    deploy_username = "uLsqPa"
+    deploy_password = "j6vtQWs1aW"
     if (env == 'release' || env == 'pre_release' || env == 'prod') {
-        repository_url = 'https://repo.rdc.aliyun.com/repository/32689-release-iWEQiT/'
-        deploy_username = "${rdc_releases_user}"
-        deploy_password = "${rdc_releases_password}"
+        repository_url = 'https://repo.rdc.aliyun.com/repository/26265-release-VaL2IE/'
+        deploy_username = "uLsqPa"
+        deploy_password = "j6vtQWs1aW"
 
         recoveryplusProjectVersion = '0.0.1.RELEASE'
         recoveryplusCommonLibVersion = '0.0.1.RELEASE'
@@ -36,23 +36,23 @@ allprojects {
     [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
     repositories {
-        mavenLocal()
-        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
         maven {
-            url 'https://repo.rdc.aliyun.com/repository/32689-snapshot-mdskME/'
+            url 'https://maven.aliyun.com/repository/public'
+        }
+        maven {
+            url 'https://repo.rdc.aliyun.com/repository/26265-release-VaL2IE/'
             credentials {
-                username = "${rdc_snapshots_user}"
-                password = "${rdc_snapshots_password}"
+                username 'uLsqPa'
+                password 'j6vtQWs1aW'
             }
         }
         maven {
-            url 'https://repo.rdc.aliyun.com/repository/32689-release-iWEQiT/'
+            url 'https://repo.rdc.aliyun.com/repository/26265-snapshot-jHAMd1/'
             credentials {
-                username = "${rdc_releases_user}"
-                password = "${rdc_releases_password}"
+                username 'uLsqPa'
+                password 'j6vtQWs1aW'
             }
         }
-        mavenCentral()
     }
 
     configurations.all {

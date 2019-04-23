@@ -60,17 +60,6 @@
         </dependencies>
     </dependencyManagement>
 
-    <distributionManagement>
-        <repository>
-            <id>rdc-releases</id>
-            <url>https://repo.rdc.aliyun.com/repository/32689-release-iWEQiT/</url>
-        </repository>
-        <snapshotRepository>
-            <id>rdc-snapshots</id>
-            <url>https://repo.rdc.aliyun.com/repository/32689-snapshot-mdskME/</url>
-        </snapshotRepository>
-    </distributionManagement>
-
     <profiles>
         <profile>
             <activation>
@@ -80,15 +69,15 @@
             <id>rdc-private-repo</id>
             <repositories>
                 <repository>
-                    <id>rdc-releases</id>
-                    <url>https://repo.rdc.aliyun.com/repository/32689-release-iWEQiT/</url>
+                    <id>postop-rdc-releases</id>
+                    <url>https://repo.rdc.aliyun.com/repository/26265-release-VaL2IE/</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
                 </repository>
                 <repository>
-                    <id>rdc-snapshots</id>
-                    <url>https://repo.rdc.aliyun.com/repository/32689-snapshot-mdskME/</url>
+                    <id>postop-rdc-snapshots</id>
+                    <url>https://repo.rdc.aliyun.com/repository/26265-snapshot-jHAMd1/</url>
                     <snapshots>
                         <enabled>true</enabled>
                     </snapshots>

@@ -64,12 +64,12 @@
 
     <distributionManagement>
         <repository>
-            <id>rdc-releases</id>
-            <url>https://repo.rdc.aliyun.com/repository/32689-release-iWEQiT/</url>
+            <id>postop-rdc-releases</id>
+            <url>https://repo.rdc.aliyun.com/repository/26265-release-VaL2IE/</url>
         </repository>
         <snapshotRepository>
-            <id>rdc-snapshots</id>
-            <url>https://repo.rdc.aliyun.com/repository/32689-snapshot-mdskME/</url>
+            <id>postop-rdc-snapshots</id>
+            <url>https://repo.rdc.aliyun.com/repository/26265-snapshot-jHAMd1/</url>
         </snapshotRepository>
     </distributionManagement>
 

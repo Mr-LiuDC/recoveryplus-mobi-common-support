@@ -30,6 +30,17 @@
         </dependency>
     </dependencies>
 
+    <distributionManagement>
+        <repository>
+            <id>postop-rdc-releases</id>
+            <url>https://repo.rdc.aliyun.com/repository/26265-release-VaL2IE/</url>
+        </repository>
+        <snapshotRepository>
+            <id>postop-rdc-snapshots</id>
+            <url>https://repo.rdc.aliyun.com/repository/26265-snapshot-jHAMd1/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <build>
         <finalName>cat-restful-api-sdk-${project.version}</finalName>
     </build>
