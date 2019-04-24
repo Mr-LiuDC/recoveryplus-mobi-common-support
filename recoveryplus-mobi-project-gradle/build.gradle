@@ -77,7 +77,15 @@ allprojects {
             html.enabled = true
         }
     }
-    check.dependsOn jacocoTestReport
+    check.dependsOn jacocoTestReport, jacocoTestCoverageVerification
+
+    jacocoTestCoverageVerification {
+        violationRules {
+            rule {
+                limit { minimum = 0.8 }
+            }
+        }
+    }
 
     pmd {
         ignoreFailures = false
