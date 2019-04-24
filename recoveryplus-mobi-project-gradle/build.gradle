@@ -4,7 +4,13 @@ plugins {
 }
 
 ext {
-    recoveryplusProjectVersion = '0.0.1-SNAPSHOT'
+    projectGroupId = 'recoveryplus.mobi.project'
+    projectVersion = '0.0.1-SNAPSHOT'
+    projectExecutableJarName = 'dog-application'
+    projectRestfulSDKJarName = 'dog-restful-api-sdk'
+    projectRestfulSDKVersion = '0.0.1-SNAPSHOT'
+    projectStartClass = 'recoveryplus.mobi.project.RunApplication'
+
     recoveryplusCommonLibVersion = '0.0.1-SNAPSHOT'
 
     def env = System.getProperty("env") ?: "local"
@@ -29,8 +35,8 @@ allprojects {
     apply plugin: 'maven'
     apply plugin: 'io.spring.dependency-management'
 
-    group 'recoveryplus.mobi.project'
-    version recoveryplusProjectVersion
+    group = projectGroupId
+    version = projectVersion
     sourceCompatibility = 1.8
     targetCompatibility = 1.8
     [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'

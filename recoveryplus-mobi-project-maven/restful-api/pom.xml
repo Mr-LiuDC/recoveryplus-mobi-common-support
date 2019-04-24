@@ -16,23 +16,23 @@
         <dependency>
             <groupId>recoveryplus.mobi.project</groupId>
             <artifactId>application-service</artifactId>
-            <version>${project.version}</version>
+            <version>${projectVersion}</version>
         </dependency>
         <dependency>
             <groupId>recoveryplus.mobi.project</groupId>
             <artifactId>query-service</artifactId>
-            <version>${project.version}</version>
+            <version>${projectVersion}</version>
         </dependency>
         <dependency>
             <groupId>recoveryplus.mobi.project</groupId>
             <artifactId>application-service-impl</artifactId>
-            <version>${project.version}</version>
+            <version>${projectVersion}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>recoveryplus.mobi.project</groupId>
             <artifactId>query-service-impl</artifactId>
-            <version>${project.version}</version>
+            <version>${projectVersion}</version>
             <scope>runtime</scope>
         </dependency>
 
@@ -165,13 +165,13 @@
     </profiles>
 
     <build>
-        <finalName>cat-application</finalName>
+        <finalName>${projectExecutableJarName}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>recoveryplus.mobi.project.RuneApplication</mainClass>
+                    <mainClass>${projectStartClass}</mainClass>
                 </configuration>
             </plugin>
         </plugins>

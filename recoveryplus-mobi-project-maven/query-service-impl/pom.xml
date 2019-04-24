@@ -16,12 +16,12 @@
         <dependency>
             <groupId>recoveryplus.mobi.project</groupId>
             <artifactId>query-service</artifactId>
-            <version>${project.version}</version>
+            <version>${projectVersion}</version>
         </dependency>
         <dependency>
             <groupId>recoveryplus.mobi.project</groupId>
             <artifactId>data-access-layer</artifactId>
-            <version>${project.version}</version>
+            <version>${projectVersion}</version>
         </dependency>
     </dependencies>
 

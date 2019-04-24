@@ -10,7 +10,12 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>
-        <project.version>0.0.1-SNAPSHOT</project.version>
+        <projectVersion>0.0.1-SNAPSHOT</projectVersion>
+        <projectExecutableJarName>cat-application</projectExecutableJarName>
+        <projectStartClass>recoveryplus.mobi.project.RunApplication</projectStartClass>
+        <projectRestfulSDKJarName>cat-restful-api-sdk</projectRestfulSDKJarName>
+        <projectRestfulSDKVersion>0.0.1-SNAPSHOT</projectRestfulSDKVersion>
+
         <recoveryplus-common.version>0.0.1-SNAPSHOT</recoveryplus-common.version>
         <jacoco-maven-plugin.version>0.8.3</jacoco-maven-plugin.version>
 

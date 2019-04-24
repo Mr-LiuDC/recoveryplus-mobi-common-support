@@ -31,6 +31,6 @@ sourceSets {
 }
 
 bootJar {
-    baseName = "dog-application"
-    mainClassName = "recoveryplus.mobi.project.RunApplication"
+    baseName = projectExecutableJarName
+    mainClassName = projectStartClass
 }

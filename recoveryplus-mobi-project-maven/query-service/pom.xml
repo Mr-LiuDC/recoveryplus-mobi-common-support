@@ -16,7 +16,7 @@
         <dependency>
             <groupId>recoveryplus.mobi.project</groupId>
             <artifactId>data-transfer-object</artifactId>
-            <version>${project.version}</version>
+            <version>${projectVersion}</version>
         </dependency>
     </dependencies>
 

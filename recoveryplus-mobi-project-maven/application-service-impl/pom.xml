@@ -15,17 +15,17 @@
         <dependency>
             <groupId>recoveryplus.mobi.project</groupId>
             <artifactId>application-service</artifactId>
-            <version>${project.version}</version>
+            <version>${projectVersion}</version>
         </dependency>
         <dependency>
             <groupId>recoveryplus.mobi.project</groupId>
             <artifactId>domain-model</artifactId>
-            <version>${project.version}</version>
+            <version>${projectVersion}</version>
         </dependency>
         <dependency>
             <groupId>recoveryplus.mobi.project</groupId>
             <artifactId>domain-infrastructure</artifactId>
-            <version>${project.version}</version>
+            <version>${projectVersion}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>

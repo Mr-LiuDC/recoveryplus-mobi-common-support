@@ -1,5 +1,5 @@
 jar {
-    baseName = "dog-restful-api-sdk"
+    baseName = projectRestfulSDKJarName
 }
 
 dependencies {
@@ -41,12 +41,12 @@ artifacts {
 uploadArchives {
     repositories {
         mavenDeployer {
-            repository(url: "${repository_url}") {
-                authentication(userName: "${deploy_username}", password: "${deploy_password}")
+            repository(url: repository_url) {
+                authentication(userName: deploy_username, password: deploy_password)
             }
-            pom.groupId = group
+            pom.groupId = projectGroupId
             pom.artifactId = jar.baseName
-            pom.version = "${recoveryplusProjectVersion}"
+            pom.version = projectRestfulSDKVersion
         }
     }
 }

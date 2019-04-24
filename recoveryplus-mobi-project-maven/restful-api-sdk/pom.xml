@@ -42,7 +42,7 @@
     </distributionManagement>
 
     <build>
-        <finalName>cat-restful-api-sdk-${project.version}</finalName>
+        <finalName>${projectRestfulSDKJarName}-${projectRestfulSDKVersion}</finalName>
     </build>
 
 </project>

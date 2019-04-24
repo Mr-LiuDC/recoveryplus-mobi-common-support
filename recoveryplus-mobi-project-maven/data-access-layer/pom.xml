@@ -15,7 +15,7 @@
         <dependency>
             <groupId>recoveryplus.mobi.project</groupId>
             <artifactId>domain-common</artifactId>
-            <version>${project.version}</version>
+            <version>${projectVersion}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
