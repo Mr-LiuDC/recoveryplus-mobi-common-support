@@ -9,10 +9,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author LiuDecai
  */
 @SpringBootApplication
-public class RuneApplication {
+public class RunApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(RuneApplication.class, args);
+        SpringApplication.run(RunApplication.class, args);
     }
 
 }

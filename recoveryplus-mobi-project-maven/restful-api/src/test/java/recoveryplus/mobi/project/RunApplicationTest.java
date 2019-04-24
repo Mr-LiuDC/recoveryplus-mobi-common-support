@@ -12,11 +12,11 @@ import org.springframework.test.context.junit4.SpringRunner;
  */
 @SpringBootTest
 @RunWith(SpringRunner.class)
-public class RuneApplicationTest {
+public class RunApplicationTest {
 
     @Test(timeout = 6000)
     public void loadContext() {
-        RuneApplication.main(new String[]{});
+        RunApplication.main(new String[]{});
     }
 
 }
