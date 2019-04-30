@@ -12,10 +12,14 @@ dependencies {
         exclude module: 'spring-boot-starter-tomcat'
     }
     compile 'org.springframework.boot:spring-boot-starter-undertow'
-    compile 'org.springframework.cloud:spring-cloud-starter-openfeign'
-    compile 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix'
-    compile 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
-    compile 'de.codecentric:spring-boot-admin-starter-client'
+    compile 'org.springframework.boot:spring-boot-starter-actuator'
+    compile 'org.springframework.cloud:spring-cloud-starter'
+
+    // 以下依赖是微服务相关依赖，必要时取消注释即可。
+    // compile 'org.springframework.cloud:spring-cloud-starter-openfeign'
+    // compile 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix'
+    // compile 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+    // compile 'de.codecentric:spring-boot-admin-starter-client'
 
     testCompile 'org.springframework.boot:spring-boot-starter-test'
 }
